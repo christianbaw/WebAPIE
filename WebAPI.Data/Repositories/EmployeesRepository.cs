@@ -21,7 +21,7 @@ namespace WebAPI.Data.Repositories
         {
 
             var Employee = (from Emp in _context.EmployeesModel
-                       join Dep in _context.DepartmentHistoryModel on Emp.BussinesEntityID equals Dep.BusinessEntityID
+                       join Dep in _context.DepartmentHistoryModel on Emp.BusinessEntityID equals Dep.BusinessEntityID
                        join Shift in _context.ShiftTimesModel on Dep.ShiftID equals Shift.ShiftID
                        
                        select new EmployeesDataModel

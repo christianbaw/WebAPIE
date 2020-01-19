@@ -14,6 +14,7 @@ using WebAPI.Data.Context;
 using WebAPI.Data.Repositories;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Data.Interfaces;
 
 namespace WebAPI
 {
@@ -36,7 +37,7 @@ namespace WebAPI
                    assembly => assembly.MigrationsAssembly("WebAPI.Data"))
                );
 
-            services.AddScoped<EmployeesRepository, EmployeesRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
