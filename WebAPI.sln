@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{4029B69A-FB40-4534-992B-8B01F4EA30C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Core", "WebAPI.Core\WebAPI.Core.csproj", "{97E61192-4FF5-452E-9FE7-81C6A475AFE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Data", "WebAPI.Data\WebAPI.Data.csproj", "{8F62CCE0-8247-48F9-8BF3-1667EB6480AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4029B69A-FB40-4534-992B-8B01F4EA30C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4029B69A-FB40-4534-992B-8B01F4EA30C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4029B69A-FB40-4534-992B-8B01F4EA30C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4029B69A-FB40-4534-992B-8B01F4EA30C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E61192-4FF5-452E-9FE7-81C6A475AFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E61192-4FF5-452E-9FE7-81C6A475AFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E61192-4FF5-452E-9FE7-81C6A475AFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E61192-4FF5-452E-9FE7-81C6A475AFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F62CCE0-8247-48F9-8BF3-1667EB6480AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F62CCE0-8247-48F9-8BF3-1667EB6480AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F62CCE0-8247-48F9-8BF3-1667EB6480AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F62CCE0-8247-48F9-8BF3-1667EB6480AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE483B87-BC5B-41A5-BD26-67AB3E4E5477}
+	EndGlobalSection
+EndGlobal
