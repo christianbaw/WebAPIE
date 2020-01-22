@@ -30,6 +30,7 @@ namespace WebAPI.Data.Context
         public DbSet<EmployeesModel> EmployeesModel { get; set; }
         public DbSet<ShiftTimesModel> ShiftTimesModel { get; set; }
         public DbSet<DepartmentHistoryModel> DepartmentHistoryModel { get; set; }
+        public DbSet<PersonModel> PersonModel { get; set; }
 
 
 
