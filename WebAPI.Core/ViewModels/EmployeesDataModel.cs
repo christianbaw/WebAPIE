@@ -14,6 +14,9 @@ namespace WebAPI.Core.ViewModels
         public string ShiftName { get; set; }
         public TimeSpan? ShiftStartTime { get; set; }
         public TimeSpan? ShiftEndTime { get; set; }
+        public string ProfilePicture { get; set; }
+
+        public string EmployeesName { get; set; }
 
     }
 }
