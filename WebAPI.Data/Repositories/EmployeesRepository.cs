@@ -23,6 +23,7 @@ namespace WebAPI.Data.Repositories
             var Employee = (from Emp in _context.EmployeesModel
                        join Dep in _context.DepartmentHistoryModel on Emp.BusinessEntityID equals Dep.BusinessEntityID
                        join Shift in _context.ShiftTimesModel on Dep.ShiftID equals Shift.ShiftID
+                       join person in _context.PersonModel on Emp.BusinessEntityID equals person.BusinessEntityID
                        
                        select new EmployeesDataModel
                        {
@@ -33,9 +34,14 @@ namespace WebAPI.Data.Repositories
                            HireDate = Emp.HireDate,
                            ShiftName = Shift.Name,
                            ShiftStartTime = Shift.StartTime,
-                           ShiftEndTime = Shift.EndTime
+                           ShiftEndTime = Shift.EndTime,
+                           ProfilePicture = person.PersonPicture,
+                           EmployeesName = (string.IsNullOrEmpty(person.Suffix) ? "" : person.Suffix + " ") + (string.IsNullOrEmpty(person.FirstName) ? "" : person.FirstName + ", ") + (string.IsNullOrEmpty(person.LastName) ? "" : person.LastName )
 
-                           
+
+
+
+
                        }).ToList();
 
             return Employee;
