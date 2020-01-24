@@ -8,6 +8,8 @@ namespace WebAPI.Data.Interfaces
 {
     public interface IEmployeeRepository
     {
-        IEnumerable<EmployeesDataModel> getAll();
+        List<EmployeesDataModel> getAll();
+
+        List<DepartmentModel> GetDepartments();
     }
 }

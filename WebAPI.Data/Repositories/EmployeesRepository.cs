@@ -17,7 +17,7 @@ namespace WebAPI.Data.Repositories
         }
 
 
-        public IEnumerable<EmployeesDataModel> getAll()
+        public List<EmployeesDataModel> getAll()
         {
 
             var Employee = (from Emp in _context.EmployeesModel
@@ -45,6 +45,13 @@ namespace WebAPI.Data.Repositories
                        }).ToList();
 
             return Employee;
+        }
+
+        public List<DepartmentModel> GetDepartments()
+        {
+            var Departments = _context.DepartmentModel.ToList();
+
+            return Departments;
         }
     }
 }

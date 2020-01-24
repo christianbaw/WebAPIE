@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebAPI.Core.Models;
 using WebAPI.Core.ViewModels;
 using WebAPI.Data.Interfaces;
 
@@ -39,6 +40,23 @@ namespace WebAPI.Controllers
            
         }
 
-        
+        [HttpGet]
+        public List<DepartmentModel> getDepartment()
+        {
+            var Departments = _repository.GetDepartments();
+
+            if (Departments == null)
+            {
+                return null;
+            }
+            else
+            {
+                return Departments;
+
+
+
+            }
+        }
+
     }
 }
