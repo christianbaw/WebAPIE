@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using WebAPI.Core.Models;
 using WebAPI.Core.ViewModels;
 
@@ -8,8 +9,10 @@ namespace WebAPI.Data.Interfaces
 {
     public interface IEmployeeRepository
     {
-        List<EmployeesDataModel> getAll();
+        Task <List<EmployeesDataModel>> getAll();
 
-        List<DepartmentModel> GetDepartments();
+        Task <List<Department>> GetDepartments();
+
+        Task <List<TotalMonthsModel>> getUsersByMonth();
     }
 }

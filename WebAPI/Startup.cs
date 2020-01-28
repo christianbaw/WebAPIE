@@ -1,20 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using WebAPI.Data.Context;
-using WebAPI.Data.Repositories;
-using Microsoft.EntityFrameworkCore.SqlServer;
-using Microsoft.EntityFrameworkCore;
 using WebAPI.Data.Interfaces;
+using WebAPI.Data.Repositories;
 
 namespace WebAPI
 {
@@ -33,7 +25,8 @@ namespace WebAPI
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(
-                   options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                   options => options.
+                   UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                    assembly => assembly.MigrationsAssembly("WebAPI.Data"))
                );
 

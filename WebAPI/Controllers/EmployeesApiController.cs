@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
         
         [HttpGet]
-        public IEnumerable<EmployeesDataModel> Get()
+        public async Task <List<EmployeesDataModel>> Get()
         {
             var Employee = _repository.getAll();
             
@@ -34,14 +34,14 @@ namespace WebAPI.Controllers
             }
             else
             {
-                return Employee;
+                return await Employee;
             }
 
            
         }
 
         [HttpGet]
-        public List<DepartmentModel> getDepartment()
+        public async Task <List<Department>> getDepartment()
         {
             var Departments = _repository.GetDepartments();
 
@@ -51,7 +51,25 @@ namespace WebAPI.Controllers
             }
             else
             {
-                return Departments;
+                return await Departments;
+
+
+
+            }
+        }
+
+        [HttpGet]
+        public async Task<List<TotalMonthsModel>> GetEmployeesChart()
+        {
+            var Departments = _repository.getUsersByMonth();
+
+            if (Departments == null)
+            {
+                return null;
+            }
+            else
+            {
+                return await Departments;
 
 
 
